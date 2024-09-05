@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  hapi-fhir:
+    image: hapiproject/hapi:v6.2.0
+    container_name: hapi-fhir
+    ports:
+      - "8080:8080"
+    environment:
+      - HAPI_FHIR_VERSION=R4
+    volumes:
+      - ./hapi_data:/data
