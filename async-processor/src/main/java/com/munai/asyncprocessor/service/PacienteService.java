@@ -8,7 +8,6 @@ import com.opencsv.CSVReader;
 
 import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
 
 @Service
 public class PacienteService {
@@ -25,8 +24,10 @@ public class PacienteService {
                 FhirContext ctx = FhirContext.forR4();
                 IGenericClient client = ctx.newRestfulGenericClient("http://localhost:8080/hapi-fhir-jpaserver/fhir");
 
+                 // Enviar o paciente
+                // Criar e enviar os resources FHIR aqui
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
